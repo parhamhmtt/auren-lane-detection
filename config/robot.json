@@ -1,0 +1,179 @@
+{
+  "lane": {
+    "frame_width": 640,
+    "frame_height": 360,
+    "initial_lane": "right",
+    "white_hsv_low": [
+      0,
+      0,
+      103
+    ],
+    "white_hsv_high": [
+      179,
+      136,
+      255
+    ],
+    "adaptive_white": {
+      "enabled": true,
+      "percentile": 88,
+      "minimum_value": 160,
+      "saturation_max": 105
+    },
+    "roi_top_fraction": 0.28,
+    "roi_bottom_fraction": 0.0,
+    "roi_left_fraction": 0.0,
+    "roi_right_fraction": 0.0,
+    "morph_kernel": 3,
+    "gap_kernel": 3,
+    "gap_kernel_vertical": 9,
+    "gap_iterations": 1,
+    "dilate_iterations": 0,
+    "ignored_box_margin_px": 5,
+    "source_points_normalized": [
+      [
+        0.02,
+        0.98
+      ],
+      [
+        0.26,
+        0.3
+      ],
+      [
+        0.74,
+        0.3
+      ],
+      [
+        0.98,
+        0.98
+      ]
+    ],
+    "destination_points_normalized": [
+      [
+        0.12,
+        1.0
+      ],
+      [
+        0.12,
+        0.0
+      ],
+      [
+        0.88,
+        0.0
+      ],
+      [
+        0.88,
+        1.0
+      ]
+    ],
+    "bird_width": 640,
+    "bird_height": 360,
+    "bird_width_m": 0.6,
+    "bird_forward_m": 2.5,
+    "histogram_start_fraction": 0.5,
+    "histogram_smooth_px": 13,
+    "minimum_histogram_pixels": 2,
+    "histogram_peak_fraction": 0.05,
+    "minimum_peak_gap_px": 28,
+    "sliding_windows": 10,
+    "full_trace_windows": 9,
+    "window_margin_px": 72,
+    "maximum_reacquire_margin_px": 190,
+    "window_min_pixels": 8,
+    "minimum_trace_windows": 3,
+    "lane_width_min_fraction": 0.23,
+    "lane_width_max_fraction": 0.5,
+    "expected_lane_count": 2,
+    "solid_dashed_support_delta": 0.12,
+    "single_solid_support_threshold": 0.62,
+    "single_boundary_confidence_scale": 0.66,
+    "support_band_radius_px": 8,
+    "fallback_lane_width_m": 0.3,
+    "continuity_tolerance_px": 145,
+    "path_step_m": 0.04,
+    "observation_horizon_m": 2.5,
+    "maximum_curvature_1pm": 4.0,
+    "confidence_length_m": 0.75,
+    "transverse_filter": {
+      "enabled": true,
+      "row_fraction": 0.26,
+      "row_margin_px": 3
+    },
+    "same_frame_curve_prediction_weight": 0.68,
+    "previous_frame_prediction_weight": 0.34,
+    "curve_margin_gain": 0.85,
+    "maximum_curve_prediction_jump_px": 185,
+    "corridor_lock_maximum_center_jump_px": 120,
+    "single_boundary_identity_tolerance_px": 150,
+    "edge_boundary_identity_tolerance_m": 0.18,
+    "single_geometry_trust_support": 0.8,
+    "single_center_maximum_step_m": 0.055,
+    "single_center_maximum_shape_m": 0.1,
+    "paired_memory_minimum_confidence": 0.72,
+    "paired_memory_minimum_coverage": 0.65,
+    "edge_follow_offset_m": 0.15,
+    "bound_interior_margin_m": 0.04,
+    "direct_circle": {
+      "minimum_points": 7,
+      "minimum_visible_span_m": 0.24,
+      "minimum_circle_radius_m": 0.24,
+      "maximum_circle_radius_m": 20.0,
+      "maximum_fit_residual_m": 0.045,
+      "minimum_residual_gate_m": 0.018,
+      "horizon_m": 1.8,
+      "maximum_arc_angle_deg": 82.0,
+      "curve_latch": {
+        "enter_curvature_1pm": 0.075,
+        "exit_curvature_1pm": 0.04,
+        "minimum_confidence": 0.22,
+        "enter_confirmation_frames": 2,
+        "straight_confirmation_frames": 7,
+        "curve_change_confirmation_frames": 6,
+        "missing_hold_frames": 9,
+        "same_curve_delta_1pm": 0.1,
+        "same_curve_relative_delta": 0.38,
+        "candidate_tolerance_1pm": 0.1,
+        "curvature_update_alpha": 0.2,
+        "heading_baseline_m": 0.28,
+        "maximum_anchor_heading_deg": 48.0,
+        "horizon_m": 1.8,
+        "step_m": 0.04
+      }
+    },
+    "refinement_v11": true,
+    "edge_curve": {
+      "enabled": true,
+      "canny_low": 40,
+      "canny_high": 130,
+      "minimum_canny_pixels": 40,
+      "minimum_canny_span_px": 28,
+      "minimum_length_m": 0.18,
+      "minimum_perimeter_px": 80,
+      "memory_hold_decay": 0.9,
+      "process_every_n_frames": 1,
+      "lane_center_bias_m": 0.0,
+      "maximum_near_distance_m": 2.2,
+      "dominant_straight_length_m": 1.15,
+      "dominant_straight_span_m": 1.0,
+      "dominant_straight_curvature_1pm": 0.14,
+      "near_curvature_window_m": 0.75,
+      "dominant_straight_heading_deg": 18.0,
+      "pair_maximum_width_error_m": 0.14,
+      "pair_maximum_curvature_1pm": 1.5,
+      "heading_curve_enter_deg": 6.0,
+      "heading_curve_max_deg": 35.0,
+      "heading_curve_min_span_m": 0.4,
+      "single_prefer_long_minimum_length_m": 0.75,
+      "stable_edge_minimum_length_m": 0.85,
+      "stable_edge_hold_frames": 6,
+      "short_edge_length_m": 0.65,
+      "short_edge_curvature_jump_1pm": 0.7,
+      "crosswalk_mask_hold_frames": 40,
+      "crosswalk_maximum_curve_1pm": 0.22,
+      "crosswalk_maximum_heading_deg": 18.0,
+      "crosswalk_maximum_lateral_m": 0.1,
+      "crosswalk_curve_release_length_m": 1.0,
+      "crosswalk_curve_release_1pm": 0.28,
+      "crosswalk_stable_hold_frames": 30
+    }
+  }
+}
